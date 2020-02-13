@@ -17,9 +17,6 @@ thirdBtn.addEventListener('mouseover', (event) => {
     event.target.style.color = "black";
 })
 
-// `blur`
-
-
 //`dblclick`, `stopPropagation`
 const bg = document.querySelector('body');
 const dest = document.querySelectorAll('.destination div');
@@ -38,9 +35,6 @@ dest[0].addEventListener('dblclick', twoClickEventHandler);
 dest[1].addEventListener('dblclick', twoClickEventHandler);
 dest[2].addEventListener('dblclick', twoClickEventHandler);
 
-//`keydown`
-
-
 //`wheel`, `preventDefault()`
 const topText = document.querySelector('.intro img')
 let scale = 1;
@@ -55,11 +49,7 @@ topText.addEventListener('wheel', (event) => {
     topText.style.transform = `scale(${scale})`;
 })
 
-//`load`
-
-
-
-//`resize`
+//`resize`, `mouseenter`
 const imgContent = document.querySelectorAll('.img-content');
 
 const enterEventHandler = (event) => {
@@ -78,9 +68,14 @@ const leaveEventHandler = (event) => {
 imgContent[0].addEventListener('mouseleave', leaveEventHandler);
 imgContent[1].addEventListener('mouseleave', leaveEventHandler);
 
-//`scroll`
 
+//`mousemove`
+const textSpin = document.querySelector('.content-destination img');
 
-//'.content-pick'
+const spinEventHandler = (event) => {
+    event.target.style.transform = "skew(30deg)";
+}
 
-//'.destination'
+textSpin.addEventListener('mousemove', spinEventHandler);
+// `focus`, `blur`
+//`load`
