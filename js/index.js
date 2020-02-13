@@ -1,4 +1,4 @@
-//`mouseover`  
+//1 - `mouseover`  
 const signUp = document.querySelectorAll('.btn')
 
 const firstBtn = signUp[0]
@@ -17,7 +17,7 @@ thirdBtn.addEventListener('mouseover', (event) => {
     event.target.style.color = "black";
 })
 
-//`dblclick`, `stopPropagation`
+//2 - `dblclick`, `stopPropagation`
 const bg = document.querySelector('body');
 const dest = document.querySelectorAll('.destination div');
 
@@ -35,7 +35,7 @@ dest[0].addEventListener('dblclick', twoClickEventHandler);
 dest[1].addEventListener('dblclick', twoClickEventHandler);
 dest[2].addEventListener('dblclick', twoClickEventHandler);
 
-//`wheel`, `preventDefault()`
+//3 - `wheel`, `preventDefault()`
 const topText = document.querySelector('.intro img')
 let scale = 1;
 
@@ -49,7 +49,8 @@ topText.addEventListener('wheel', (event) => {
     topText.style.transform = `scale(${scale})`;
 })
 
-//`resize`, `mouseenter`
+//4 - `resize`
+//5 - `mouseenter`
 const imgContent = document.querySelectorAll('.img-content');
 
 const enterEventHandler = (event) => {
@@ -60,7 +61,7 @@ const enterEventHandler = (event) => {
 imgContent[0].addEventListener('mouseenter', enterEventHandler);
 imgContent[1].addEventListener('mouseenter', enterEventHandler);
 
-//`mouseleave`
+//6 - `mouseleave`
 const leaveEventHandler = (event) => {
     event.target.style.transform = "scale(1)";
 }
@@ -69,7 +70,7 @@ imgContent[0].addEventListener('mouseleave', leaveEventHandler);
 imgContent[1].addEventListener('mouseleave', leaveEventHandler);
 
 
-//`mousemove`
+//7 - `mousemove`
 const textSpin = document.querySelector('.content-destination img');
 
 const spinEventHandler = (event) => {
@@ -77,5 +78,3 @@ const spinEventHandler = (event) => {
 }
 
 textSpin.addEventListener('mousemove', spinEventHandler);
-// `focus`, `blur`
-//`load`
